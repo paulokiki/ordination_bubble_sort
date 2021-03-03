@@ -1,23 +1,37 @@
-
+let array;
 do{
-    console.log("1 -   INCLUIR -   1");
-    console.log("2 -  BOOBLESORT - 2");
-    console.log("3 -   ALTERAR -   3");
-    console.log("0 -    SAIR -     0")
+    console.log("_____________________");
     console.log(" ");
+    console.log("|1 -   INCLUIR   - 1|");
+    console.log("|2 -  BOOBLESORT - 2|");
+    console.log("|3 -   ALTERAR   - 3|");
+    console.log("|4 -  MERGISORT  - 4|");
+    console.log("|0 -    SAIR     - 0|")
+    console.log("_____________________");
+
+    
     opcao = parseInt( prompt("Escolha a opção:"));
  
 
 switch(opcao){
-case 1:
-let  tam = prompt("Qual o tamanho do ARRAY?");
     
-   console.log (fillArray(tam));
+case 1:
+console.log("_____________________________")
+let tam = prompt("  Qual o tamanho do ARRAY?");
+array = fillArray(tam);
+console.log (array);
 break;
 
 case 2:
-console.log("BoobleSort");
-console.log(opcao);
+console.log("_____________________");
+console.log("    BoobleSort");
+let result = boobleSort(array);
+console.log(result);
+break;
+
+case 4:
+console.log("_____________________");
+console.log("    mergSort");
 break;
 
 default:
@@ -26,17 +40,14 @@ break;
 }
 
 
-}while(opcao > 0 && opcao < 4)
+}while(opcao > 0 && opcao < 5)
 
-console.log("Saindo do DoWhile");
-
-
+console.log("Saindo!!!");
 
 
-function boobleSort(){
 
-     
-}
+
+
 
 
 
@@ -49,6 +60,21 @@ array.push(Math.ceil(Math.random()*(100 - 0) + 0));
 
 }
 return array;
+}
+
+function boobleSort(array){
+    for(let i = 0; i < array.length; i++) {
+          
+    for(let j = 0; j < array.length; j++) {
+            
+            if(array[j] > array[j + 1]) {
+              let aux = array[j];
+              array[j] = array[j + 1];
+              array[j + 1] = aux;
+            }
+          }
+        }
+        return array
 }
 
 
