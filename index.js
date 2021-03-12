@@ -5,7 +5,7 @@ do{
     console.log("|1 -   INCLUIR   - 1|");
     console.log("|2 -  BOOBLESORT - 2|");
     console.log("|3 -   ALTERAR   - 3|");
-    console.log("|4 -  MERGISORT  - 4|");
+    console.log("|4 -  MERGESORT  - 4|");
     console.log("|0 -    SAIR     - 0|")
     console.log("_____________________");
 
